@@ -1,13 +1,14 @@
 .bgwelcome {
   height: 10%;
-  background-color: rgba(157, 255, 198, 0.42);
+  /* background-color: #6FDE96; */
+  /* background-color: rgba(157, 255, 198, 0.42); */
   position: relative;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
   margin-top: 3%;
 }
 .hrStyle{
-    border: 1px solid #000;
+    border: 1px solid rgb(187, 187, 187);
 }
 .iframe-container {
   overflow: hidden;
