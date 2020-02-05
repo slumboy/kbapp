@@ -1,10 +1,32 @@
 .bordernav{
     width: auto;
     height: 190%;
-    /* border: 1px solid #ff0000; */
 }
 .bordernav .ali{
     margin-top: 0rem;
     align-items: center;
-    /* border: 1px solid #411111; */
 }
+
+.navbar {
+    background-color:#20c997;
+    margin-bottom: 10%;
+}
+
+.top-nav-collapse {
+    background-color: #134d3b;
+}
+.nav-item{
+    margin: 2% 2%;
+}
+
+.nav-item>button{
+    width: 100px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #00ffb3;
+    }
+}
+

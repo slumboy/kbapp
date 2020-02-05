@@ -9,6 +9,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarappComponent } from './navbarapp/navbarapp.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ContentComponent } from './content/content.component';
+import { FooterComponent } from './footer/footer.component';
+import { OurteamComponent } from './ourteam/ourteam.component';
+import { OurserviceComponent } from './ourservice/ourservice.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AboutComponent,
     ContactComponent,
     NavbarappComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ContentComponent,
+    FooterComponent,
+    OurteamComponent,
+    OurserviceComponent
   ],
   imports: [
     BrowserModule,
