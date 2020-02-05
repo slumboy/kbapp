@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule,NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { OurteamComponent } from './ourteam/ourteam.component';
 import { OurserviceComponent } from './ourservice/ourservice.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { OurserviceComponent } from './ourservice/ourservice.component';
     ContentComponent,
     FooterComponent,
     OurteamComponent,
-    OurserviceComponent
+    OurserviceComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgbAlertModule
+    NgbAlertModule,    
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
