@@ -1,0 +1,10 @@
+.bordernav{
+    width: auto;
+    height: 190%;
+    /* border: 1px solid #ff0000; */
+}
+.bordernav .ali{
+    margin-top: 0rem;
+    align-items: center;
+    /* border: 1px solid #411111; */
+}

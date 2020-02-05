@@ -1,0 +1,30 @@
+.container .bgwelcome {
+  height: 30%;
+  background-color: rgba(157, 255, 198, 0.42);
+  /* background-color: rgb(157, 255, 198); */
+  position: relative;
+  /* padding-top: 45%; */
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+  margin-top: 4%;
+}
+.hrStyle{
+    border: 1px solid #000;
+}
+
+iframe {
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+  margin-bottom: 30px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 4px 4px 14px #000;
+  -webkit-box-shadow: 4px 4px 14px #000;
+  box-shadow: 4px 4px 14px #000;
+  /* -moz-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  -ms-transform: rotate(20deg); */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.2);
+}
