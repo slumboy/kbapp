@@ -674,6 +674,7 @@ input,
 select,
 textarea,
 label {
+  font-family: 'Kanit';
   font-size: 18px;
   line-height: 27px
 }
@@ -687,7 +688,6 @@ label {
 }
 
 @media (min-width: 481px) {
-
   .container,
   .container-sm {
     padding-left: 24px;
@@ -1827,9 +1827,9 @@ main {
     width: 100%;
     /* background-color: #1274ED; */
   }
-  input{
+  /* input{
     height: 20px;
-  }
+  } */
 }
 
 .form__group {
@@ -1893,7 +1893,7 @@ main {
 
 /* demo */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'kanit';
   display: flex;
   flex-direction: column;
   justify-content: center;

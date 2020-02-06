@@ -24,7 +24,8 @@ body {
 
 .inputbtn {
   width: 250px;
-  background-color: #94a7ed;
+  /* background-color: #94a7ed; */
+  background-color: #404040;
   align-items: baseline;
   margin: 3% 3%;
 }
@@ -40,7 +41,7 @@ body {
 .btnFacebook {
   color: #EEF2F7;
   width: 250px;
-  background-color: #0c1e5f;
+  background-color: #1339c1;
   align-items: baseline;
   margin: 3% 3%;
 }
