@@ -10,7 +10,7 @@
       <div class="container-sm">
         <div class="hero-inner">
           <!-- <div class="container mt-6"> -->
-          <form class="frmCus">
+          <form class="frmCus" [formGroup]="userForm" (ngSubmit)="signup()">
             <div class="row">
               <div class="col">
                 <h3 class="hero-title h2-mobile mt-0 is-revealing">เข้าสู่ระบบ</h3>
@@ -20,14 +20,17 @@
             <br>
             <div class="row inputtxt">
               <div class="col-12 form__group field">
-                <input type="text" class="form-control form__field" autocomplete="nope" name="username" id="username"
-                  placeholder="ชื่อผู้ใช้งาน">
+                <input type="email" class="form-control form__field" formControlName="emailSignup"
+                autocomplete="nope"
+                  name="username" id="username" placeholder="ชื่อผู้ใช้งาน">
                 <label class="form__label" for="username">ชื่อผู้ใช้งาน</label>
               </div>
             </div>
             <div class="row inputtxt">
               <div class="col-12 form__group field">
-                <input type="password" class="form-control form__field" autocomplete="new-password" name="password"
+                <input type="password" class="form-control form__field"
+                formControlName="passwordSignup"
+                 autocomplete="new-password" name="password"
                   id="password" placeholder="รหัสผ่าน">
                 <label class="form__label" for="paswword">รหัสผ่าน</label>
               </div>
@@ -42,7 +45,7 @@
             </div>
             <div class="row inputtxt">
               <div class="col text-center">
-                <button type="button" class="btn btn-dark inputbtn" btn-lg btn-block> เข้าสู่ระบบ
+                <button type="submit" class="btn btn-dark inputbtn" btn-lg btn-block> เข้าสู่ระบบ
                   <i class="fa fa-sign-in" aria-hidden="true"></i>
                 </button>
               </div>
@@ -51,12 +54,6 @@
           </form>
           <!-- Social Mediea -->
           <div class="row inputtxt">
-            <!-- <div class="col-12 text-center">
-              <button type="button" class="btn btn-social-icon btn-twitter btnTwitter" btn-lg btn-block>
-                Twitter
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </button>
-            </div> -->
             <div class="col-12 text-center">
               <button type="button" class="btn btn-social-icon btn-twitter btnFacebook" btn-lg btn-block>
                 Facebook
