@@ -29,11 +29,12 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: './manege/manege.module#ManegeModule',
     data: { preload: false }
-  }
+  },
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({
-  imports: [ManegeModule, RouterModule.forRoot(routes)],
+  imports: [ManegeModule, RouterModule.forRoot(routes,{ enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

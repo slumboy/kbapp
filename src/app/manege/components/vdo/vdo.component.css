@@ -1,0 +1,19 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+label {
+  font-family: 'Kanit';
+}
+
+.file-field.big .file-path-wrapper {
+  height: 3.2rem;
+}
+
+.file-field.big .file-path-wrapper .file-path {
+  height: 3rem;
+}

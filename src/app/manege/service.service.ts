@@ -14,7 +14,11 @@ export class ServiceService {
   // test get data
 
   getData() {
-   return 'XXXX';
+   
+  }
+
+  addData(){
+    
   }
 
 }
