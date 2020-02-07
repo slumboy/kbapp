@@ -27,7 +27,8 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: './manege/manege.module.ts@ManegeModule'
+    loadChildren: './manege/manege.module#ManegeModule',
+    data: { preload: false }
   }
 ];
 

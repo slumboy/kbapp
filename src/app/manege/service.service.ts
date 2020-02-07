@@ -14,16 +14,7 @@ export class ServiceService {
   // test get data
 
   getData() {
-    return this.firestore.collection('contents').snapshotChanges().pipe(
-      map(res=>{
-        return res.map(data=>(
-          {
-            // key:data.key,
-            // value:data.playload.val()
-          }
-        ))
-      })
-    )
+   return 'XXXX';
   }
 
 }

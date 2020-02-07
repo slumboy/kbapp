@@ -11,9 +11,9 @@ export class ContentComponent implements OnInit {
   constructor(private service:ServiceService) { }
 
   ngOnInit() {
-    this.service.getData().subscribe(res=>{
-      console.table(res);
-    })
+    // this.service.getData().subscribe(res=>{
+    //   console.table(res);
+    // })
   }
 
 }
