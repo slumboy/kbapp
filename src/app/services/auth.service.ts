@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
+import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
 @Injectable({
@@ -54,8 +55,19 @@ export class AuthService {
     return this.socialSignIn(provider);
   }
   facebookLogin() {
-    const provider = new firebase.auth.FacebookAuthProvider()
-    return this.socialSignIn(provider);
+    // const provider = new firebase.auth.FacebookAuthProvider()
+    // return this.socialSignIn(provider);
+    return new Promise<any>((resolve, reject) => {
+      let provider = new firebase.auth.FacebookAuthProvider();
+      this.afAuth.auth
+      .signInWithPopup(provider)
+      .then(res => {
+        resolve(res);
+      }, err => {
+        console.log(err);
+        reject(err);
+      })
+    })
   }
   twitterLogin() {
     const provider = new firebase.auth.TwitterAuthProvider()
@@ -92,8 +104,8 @@ export class AuthService {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((user) => {
         this.authState = user
-        this.updateUserData()
-        this.router.navigate(['/'])
+        // this.updateUserData()
+        this.router.navigate(['dashboard'])
       })
       .catch(error => console.log(error));
   }

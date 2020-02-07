@@ -33,9 +33,16 @@ export class LoginComponent implements OnInit {
       ])
     });
   }
-  signup(): void {
-    console.log(this.userForm.value.emailSignup, this.userForm.value.passwordSignup);
-    this.auth.emailSignUp(this.userForm.value.emailSignup, this.userForm.value.passwordSignup)
+  signin(): void {
+    this.auth.emailLogin(this.userForm.value.emailSignup, this.userForm.value.passwordSignup);
+  }
+
+  signInFaceBook(){
+    this.auth.facebookLogin();
+  }
+
+  signOut(){
+    this.auth.signOut();
   }
 
 }

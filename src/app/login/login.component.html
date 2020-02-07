@@ -10,7 +10,7 @@
       <div class="container-sm">
         <div class="hero-inner">
           <!-- <div class="container mt-6"> -->
-          <form class="frmCus" [formGroup]="userForm" (ngSubmit)="signup()">
+          <form class="frmCus" [formGroup]="userForm" (ngSubmit)="signin()">
             <div class="row">
               <div class="col">
                 <h3 class="hero-title h2-mobile mt-0 is-revealing">เข้าสู่ระบบ</h3>
@@ -20,18 +20,15 @@
             <br>
             <div class="row inputtxt">
               <div class="col-12 form__group field">
-                <input type="email" class="form-control form__field" formControlName="emailSignup"
-                autocomplete="nope"
+                <input type="email" class="form-control form__field" formControlName="emailSignup" autocomplete="nope"
                   name="username" id="username" placeholder="ชื่อผู้ใช้งาน">
                 <label class="form__label" for="username">ชื่อผู้ใช้งาน</label>
               </div>
             </div>
             <div class="row inputtxt">
               <div class="col-12 form__group field">
-                <input type="password" class="form-control form__field"
-                formControlName="passwordSignup"
-                 autocomplete="new-password" name="password"
-                  id="password" placeholder="รหัสผ่าน">
+                <input type="password" class="form-control form__field" formControlName="passwordSignup"
+                  autocomplete="new-password" name="password" id="password" placeholder="รหัสผ่าน">
                 <label class="form__label" for="paswword">รหัสผ่าน</label>
               </div>
             </div>
@@ -55,7 +52,7 @@
           <!-- Social Mediea -->
           <div class="row inputtxt">
             <div class="col-12 text-center">
-              <button type="button" class="btn btn-social-icon btn-twitter btnFacebook" btn-lg btn-block>
+              <button type="button"  (click)="signInFaceBook()" class="btn btn-social-icon btn-twitter btnFacebook" btn-lg btn-block>
                 Facebook
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </button>
@@ -65,6 +62,10 @@
                 Google
                 <i class="fa fa-google" aria-hidden="true"></i>
               </button>
+              
+              <h1 *ngIf="auth.authState">Hello
+                {{ (auth.authState)?.email }}</h1>
+              <button (click)="signOut()" *ngIf="auth.authState">Logout</button>
             </div>
           </div>
           <!-- </div> -->
