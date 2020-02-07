@@ -1,0 +1,83 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700,800,900,900i&display=swap&subset=latin-ext,thai"
+  rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div class="container-sm col-4">
+  <main>
+    <section class="hero text-center">
+      <div class="container-sm">
+        <div class="hero-inner">
+
+          <!-- Form Register -->
+          <form class="frmCus" [formGroup]="userForm" (ngSubmit)="signup()">
+            <div class="row">
+              <div class="col">
+                <h3 class="hero-title h2-mobile mt-0 is-revealing">ลงทะเบียน</h3>
+              </div>
+            </div>
+            <div class="row inputtxt">
+              <div class="col-12 form__group field">
+                <input type="text" class="form-control form__field" formControlName="firstNameSignup"
+                  autocomplete="nope" name="fname" id="fname" placeholder="ชื่อ">
+                <label class="form__label" for="fname">ชื่อ</label>
+              </div>
+
+              <div class="col-12 form__group field">
+                <input type="text" class="form-control form__field" formControlName="lastNameSignup" autocomplete="nope"
+                  name="lname" id="lname" placeholder="นามสกุล">
+                <label class="form__label" for="lname">นามสกุล</label>
+              </div>
+            </div>
+            <div class="row inputtxt">
+              <div class="col-12 form__group field">
+                <input type="email" class="form-control form__field" formControlName="emailSignup" autocomplete="off"
+                  name="email" id="email" placeholder="รหัสผ่าน">
+                <label class="form__label" for="email">e-mail</label>
+              </div>
+              <div class="col-12 form__group field">
+                <input type="tel" [pattern]="mobNumberPattern" class="form-control form__field"
+                  formControlName="telSignup" autocomplete="off" name="tel" id="tel" placeholder="รหัสผ่าน">
+                <label class="form__label" for="tel">เบอร์โทร</label>
+              </div>
+            </div>
+            <br>
+            <div class="row inputtxt">
+              <div class="col text-center">
+                <button type="submit" class="btn btn-dark inputbtn" btn-lg btn-block> ยืนยัน
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <hr>
+          </form>
+          <!-- Close Form Register -->
+
+          <!-- Social Mediea -->
+          <div class="row inputtxt">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-social-icon btn-twitter btnFacebook" btn-lg btn-block
+                (click)="faceBook()">
+                Facebook
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="col text-center">
+              <button type="button" class="btn btn-social-icon btn-twitter btnGoogle" btn-lg btn-block>
+                Google
+                <i class="fa fa-google" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, velit!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<br>
+<br>
+<br>
+<script src="./assets/js/main.min.js"></script>

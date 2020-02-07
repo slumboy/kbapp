@@ -3,14 +3,19 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-// import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
+import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Firebase
-import { AngularFireModule } from 'angularfire2';
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+// Fire base 2
+import { environment } from "src/environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,18 +32,9 @@ import { OurserviceComponent } from './ourservice/ourservice.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
-
-// Config Firebase
-export const firebaseConfig = {
-  apiKey: "AIzaSyCCTK_LsXN4AXziWuQmZ_CeFHIa9grpEOM",
-  authDomain: "kbapp-94523.firebaseapp.com",
-  databaseURL: "https://kbapp-94523.firebaseio.com",
-  projectId: "kbapp-94523",
-  storageBucket: "kbapp-94523.appspot.com",
-  messagingSenderId: "337133645878",
-  appId: "1:337133645878:web:66fe253d059e44c1bca897",
-  measurementId: "G-BTM8CF0EZQ"
-};
+import { RegisterComponent } from './register/register.component';
+import { ManegeModule } from './manege/manege.module';
+import { CKEditorModule } from 'ckeditor4-angular';
 
 @NgModule({
   declarations: [
@@ -52,7 +48,8 @@ export const firebaseConfig = {
     FooterComponent,
     OurteamComponent,
     OurserviceComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -62,9 +59,12 @@ export const firebaseConfig = {
     NgbModule,
     NgbAlertModule,
     AngularFontAwesomeModule,
-    // SocialLoginModule,
+    SocialLoginModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ManegeModule,
+    CKEditorModule,
+    AngularFirestoreModule
   ],
   providers: [
     AuthService,
