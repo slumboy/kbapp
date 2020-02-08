@@ -41,6 +41,10 @@ export class LoginComponent implements OnInit {
     this.auth.facebookLogin();
   }
 
+  signInGoogle(){
+    this.auth.googleLogin();
+  }
+
   signOut(){
     this.auth.signOut();
   }

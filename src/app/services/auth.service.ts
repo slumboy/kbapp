@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -6,6 +6,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 // import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { User } from '../shared/user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,15 @@ export class AuthService {
 
   authState: any = null;
   userRef: AngularFireObject<any>;
+  user:User;
 
   constructor(private afAuth: AngularFireAuth,
     private db: AngularFireDatabase,
+    private ngZone: NgZone,
     private router: Router) {
     this.afAuth.authState.subscribe((auth) => {
-      this.authState = auth
+      this.authState = auth;
+      this.user = auth;
     });
   }
   get authenticated(): boolean {
@@ -60,13 +64,14 @@ export class AuthService {
     return new Promise<any>((resolve, reject) => {
       let provider = new firebase.auth.FacebookAuthProvider();
       this.afAuth.auth
-      .signInWithPopup(provider)
-      .then(res => {
-        resolve(res);
-      }, err => {
-        console.log(err);
-        reject(err);
-      })
+        .signInWithPopup(provider)
+        .then(res => {
+          resolve(res);
+          this.router.navigate(['/dashboard'])
+        }, err => {
+          console.log(err);
+          reject(err);
+        })
     })
   }
   twitterLogin() {
@@ -76,10 +81,14 @@ export class AuthService {
   private socialSignIn(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
-        console.log(credential.user);
         this.authState = credential.user
-        this.updateUserData()
-        this.router.navigate(['/'])
+        this.ngZone.run(() => {
+          this.router.navigate(['/dashboard']);
+        })
+        // console.log(credential.user);
+        // this.authState = credential.user
+        // this.updateUserData()
+        // this.router.navigate(['/'])
       })
       .catch(error => console.log(error));
   }
@@ -105,7 +114,7 @@ export class AuthService {
       .then((user) => {
         this.authState = user
         // this.updateUserData()
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['/dashboard'])
       })
       .catch(error => console.log(error));
   }

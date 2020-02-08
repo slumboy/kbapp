@@ -39,10 +39,11 @@
         ดูข้อมูลลูกค้า
       </span>
     </a>
-    <a href="#" class="list-group-item list-group-item-action bg-light">
+    <a href="#" (click)="signOut()" *ngIf="auth.authState" class="list-group-item list-group-item-action bg-light">
       <span>
         <i class="fa fa-sign-out" aria-hidden="true"></i>
-        ออกจากระบบ
+        {{ (auth.authState)?.displayName }}
+        <img src="{{(auth.authState)?.photoURL}}" alt="avatal" srcset="{{(auth.authState)?.photoUrl}}">
       </span>
     </a>
   </div>

@@ -5,7 +5,6 @@ import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 // Firebase
 // import { AngularFireModule } from 'angularfire2';
 // import { AngularFirestoreModule } from 'angularfire2/firestore';

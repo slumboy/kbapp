@@ -10,7 +10,7 @@
         <hr>
       </h1>
       <!-- Form -->
-      <form (ngSubmit)="add(contentFrm)" #contentFrm="ngForm">
+      <form (ngSubmit)="add(contentFrm);onSubmit()" #contentFrm="ngForm">
         <!-- Row 1 -->
         <div class="row">
           <div class="form-group col-6">
@@ -23,51 +23,34 @@
               </div>
 
               <div class="form-group">
-                <input type="file" name="image" (change)="fileProgress($event)" />
+                <input type="file" name="image" [(ngModel)]="modelFrm.img"
+                  (change)="fileProgress($event)" />
               </div>
-
-              <!-- <div *ngIf="fileUploadProgress">
-                Upload progress: {{ fileUploadProgress }}
-              </div>
-              <div class="image-preview mb-3" *ngIf="previewUrl">
-                <img [src]="previewUrl" height="300" />
-              </div> -->
-              <!-- <div class="mb-3" *ngIf="uploadedFilePath">
-                {{uploadedFilePath}}
-              </div> -->
-
-              <!-- <div class="d-flex justify-content-center">
-                <div class="btn btn-mdb-color btn-rounded float-left">
-                  <input type="file">
-                </div>
-              </div> -->
             </div>
-            <!-- <div class="form-group">
-              <label for="">เลือกรูปภาพ</label>
-              <input type="file" name="file" ngModel class="form-control-file" aria-describedby="fileHelpId">
-            </div> -->
           </div>
         </div>
         <!-- Row 2 -->
         <div class="row mt-3">
           <div class=" col">
             <label for="topic">หัวข้อ</label>
-            <input type="text" name="txtTopic" ngModel autocomplete="off" id="txtTopic" class="form-control"
-              placeholder="แก้ไขหัวข้อ" aria-describedby="helpId">
+            <input type="text" name="txtTopic" [(ngModel)]="modelFrm.topic" autocomplete="off" id="txtTopic"
+              class="form-control" placeholder="แก้ไขหัวข้อ" aria-describedby="helpId">
           </div>
         </div>
 
         <!-- Row 3 -->
         <div class="row mt-3">
           <div class="col">
-            <ckeditor tagName="textarea"></ckeditor>
+            <ckeditor #editor [(ngModel)]="modelFrm.msg" id="msg" name="msg" type="Classic"></ckeditor>
+            <!-- divarea,Classic,Inline  for Ck Editor -->
           </div>
         </div>
 
         <!-- Row 4 -->
         <div class="row">
           <div class="col btnEdit">
-            <button type="submit" class="btn btn-primary" btn-lg btn-block>
+            <button type="submit"
+              class="btn btn-primary" btn-lg btn-block>
               <i class="fa fa-pencil-square" aria-hidden="true"></i>
               แก้ไข
             </button>

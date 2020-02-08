@@ -58,14 +58,14 @@
               </button>
             </div>
             <div class="col text-center">
-              <button type="button" class="btn btn-social-icon btn-twitter btnGoogle" btn-lg btn-block>
+              <button type="button" (click)="signInGoogle()" class="btn btn-social-icon btn-twitter btnGoogle" btn-lg btn-block>
                 Google
                 <i class="fa fa-google" aria-hidden="true"></i>
               </button>
               
-              <h1 *ngIf="auth.authState">Hello
+              <!-- <h1 *ngIf="auth.authState">Hello
                 {{ (auth.authState)?.email }}</h1>
-              <button (click)="signOut()" *ngIf="auth.authState">Logout</button>
+              <button (click)="signOut()" *ngIf="auth.authState">Logout</button> -->
             </div>
           </div>
           <!-- </div> -->

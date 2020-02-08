@@ -9,7 +9,7 @@ import { ServiceService } from './service.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VdoComponent } from './components/vdo/vdo.component';
 import { NavComponent } from './components/nav/nav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     ContentComponent,
