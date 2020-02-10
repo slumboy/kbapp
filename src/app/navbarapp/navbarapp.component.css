@@ -63,6 +63,6 @@ li > a{
 /* Mobile */
 @media only screen and (max-width: 768px) {
   .navbar {
-    background-color: #00ffb3;
+    background-color: transparent;
   }
 }
