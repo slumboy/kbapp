@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './register/register.component';
 import { ManegeModule } from './manege/manege.module';
+import { CourseComponent } from './course/course.component';
+import { CourseAllComponent } from './course-all/course-all.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,12 @@ const routes: Routes = [
   },
   {
     path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'course', component: CourseComponent
+  },
+  {
+    path: 'course-all', component: CourseAllComponent
   },
   {
     path: 'dashboard',

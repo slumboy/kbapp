@@ -64,38 +64,6 @@ export class ContentComponent implements OnInit {
 
   onSubmit() {
     const formData = new FormData();
-    formData.append('file', this.fileData);
-    this.uploadService.upload(formData)
-      .subscribe(res => {
-        console.log(res);
-        this.uploadedFilePath = res.type.toString();
-      })
+    console.log(formData);
   }
-
-
-  uploadFile(file) {  
-    console.log(file);
-    const formData = new FormData();  
-    formData.append('file', file.data);  
-    // file.inProgress = true;  
-    this.uploadService.upload(formData).pipe(  
-      map(event => {  
-        switch (event.type) {  
-          case HttpEventType.UploadProgress:  
-            file.progress = Math.round(event.loaded * 100 / event.total);  
-            break;  
-          case HttpEventType.Response:  
-            return event;  
-        }  
-      }),  
-      catchError((error: HttpErrorResponse) => {  
-        file.inProgress = false;  
-        return of(`${file.data.name} upload failed.`);  
-      })).subscribe((event: any) => {  
-        if (typeof (event) === 'object') {  
-          console.log(event.body);  
-        }  
-      });  
-  }
-
 }

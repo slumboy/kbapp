@@ -34,6 +34,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './register/register.component';
 import { ManegeModule } from './manege/manege.module';
 import { CKEditorModule } from 'ckeditor4-angular';
+import { CourseComponent } from './course/course.component';
+import { CourseAllComponent } from './course-all/course-all.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { CKEditorModule } from 'ckeditor4-angular';
     OurteamComponent,
     OurserviceComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CourseComponent,
+    CourseAllComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,7 @@
     "angular-font-awesome": "^3.1.2",
     "angularfire2": "^5.4.2",
     "angularx-social-login": "^2.2.1",
+    "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
     "bootstrap-icons": "^1.0.0-alpha2",
     "ckeditor4-angular": "^1.0.1",
