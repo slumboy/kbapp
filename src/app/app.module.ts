@@ -1,10 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+// Import ng-circle-progress
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 // Firebase
 // import { AngularFireModule } from 'angularfire2';
 // import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -36,6 +40,7 @@ import { ManegeModule } from './manege/manege.module';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { CourseComponent } from './course/course.component';
 import { CourseAllComponent } from './course-all/course-all.component';
+import { SpinnerComponentComponent } from './spinner-component/spinner-component.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +57,8 @@ import { CourseAllComponent } from './course-all/course-all.component';
     LoginComponent,
     RegisterComponent,
     CourseComponent,
-    CourseAllComponent
+    CourseAllComponent,
+    SpinnerComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +73,17 @@ import { CourseAllComponent } from './course-all/course-all.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     ManegeModule,
     CKEditorModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgCircleProgressModule.forRoot({
+      "radius": 60,
+      "outerStrokeWidth": 10,
+      "outerStrokeColor": "#1274ed",
+      "innerStrokeColor": "#3bddcc",
+      "innerStrokeWidth": 5,
+      "showBackground": true,
+      "startFromZero": true
+    })
+
   ],
   providers: [
     AuthService,

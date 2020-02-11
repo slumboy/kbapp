@@ -527,17 +527,26 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<link href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700,800,900,900i&display=swap&subset=latin-ext,thai" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700,800,900,900i&display=swap&subset=latin-ext,thai"
+  rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Roboto:500" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 <div class="is-boxed has-animations">
   <div class="body-wrap boxed-container">
+
+    <!-- <circle-progress [percent]="100" [radius]="100" [outerStrokeWidth]="16" [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+    </circle-progress> -->
+
     <!-- Navbar -->
     <app-navbarapp></app-navbarapp>
     <!-- free content -->
-    <router-outlet></router-outlet>
+    <router-outlet>
+      <!-- <app-spinner-component></app-spinner-component> -->
+    </router-outlet>
     <!-- Footer -->
     <app-footer></app-footer>
     <script src="assets/js/main.min.js"></script>

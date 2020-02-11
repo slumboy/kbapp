@@ -43,8 +43,12 @@ export class RegisterComponent implements OnInit {
     // this.auth.emailSignUp(this.userForm.value.emailSignup, this.userForm.value.passwordSignup)
   }
 
-  faceBook(){
+  signInFaceBook(){
     this.auth.facebookLogin();
+  }
+
+  signInGoogle(){
+    this.auth.googleLogin();
   }
 
 }
