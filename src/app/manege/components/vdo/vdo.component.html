@@ -11,20 +11,32 @@
       <form>
         <div class="form-row align-items-center">
           <div class="col-12 my-1">
-            <label class="sr-only" for="inlineFormInputGroupUsername">Link Video</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <i class="fa fa-paperclip" aria-hidden="true"></i>
-                </div>
-              </div>
-              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Link Video">
+
+            <div class="z-depth-1-half image-preview mb-4 ">
+              <!-- <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid"
+                alt="example placeholder" *ngIf="!previewUrl">
+              <img *ngIf="previewUrl" [src]="previewUrl" height="300" class="showImg" /> -->
+              <img class="video-image img-fluid showVdo" width="450" height="300"
+                [src]="'//i.ytimg.com/vi/'+video+'/hqdefault.jpg'" *ngIf="!thumbnailData" />
+              <img *ngIf="thumbnailData" [src]="thumbnailData" width="450" height="300" class="showVdo" />
             </div>
-          </div>
-          <div class="col my-1">
-            <button type="submit" class="btn btn-primary pull-right">
-              <i class="fa fa-pencil-square" aria-hidden="true"></i>
-              แก้ไข</button>
+
+            <label class="sr-only" for="inlineFormInputGroupUsername">Link Video</label>
+            <div class="row input-group">
+                <div class="col-8">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    </div>
+                    <a class="btn btn-primary" (click)="add()" role="button"> เลือก VDO อัพโหลด </a>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button type="submit" class="btn btn-primary pull-right">
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                    แก้ไข</button>
+                </div>
+            </div>
           </div>
         </div>
       </form>

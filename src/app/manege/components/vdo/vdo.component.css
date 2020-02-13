@@ -17,3 +17,7 @@ label {
 .file-field.big .file-path-wrapper .file-path {
   height: 3rem;
 }
+
+.showVdo{
+  box-shadow: 2px 5px 20px 2px grey;
+}

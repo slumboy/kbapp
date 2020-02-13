@@ -10,14 +10,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
 // Firebase
-// import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 // import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 
 // Fire base 2
 import { environment } from "src/environments/environment";
-import { AngularFireModule } from "@angular/fire";
+// import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 
@@ -74,6 +75,7 @@ import { SpinnerComponentComponent } from './spinner-component/spinner-component
     ManegeModule,
     CKEditorModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     NgCircleProgressModule.forRoot({
       "radius": 60,
       "outerStrokeWidth": 10,

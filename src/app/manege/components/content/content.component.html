@@ -18,13 +18,12 @@
               <div class="z-depth-1-half image-preview mb-4 ">
                 <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid"
                   alt="example placeholder" *ngIf="!previewUrl">
-
                 <img *ngIf="previewUrl" [src]="previewUrl" height="300" class="showImg" />
               </div>
 
               <div class="form-group">
                 <input type="file" name="image" [(ngModel)]="modelFrm.img"
-                  (change)="fileProgress($event)" />
+                  (change)="detectFiles($event);fileProgress($event)"/>
               </div>
             </div>
           </div>

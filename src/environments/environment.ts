@@ -12,8 +12,8 @@ export const environment = {
     projectId: "kbapp-94523",
     storageBucket: "kbapp-94523.appspot.com",
     messagingSenderId: "337133645878",
-    appId: "1:337133645878:web:66fe253d059e44c1bca897"
-    // measurementId: "G-BTM8CF0EZQ"
+    appId: "1:337133645878:web:66fe253d059e44c1bca897",
+    measurementId: "G-BTM8CF0EZQ"
   }
 };
 

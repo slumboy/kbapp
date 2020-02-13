@@ -5,6 +5,8 @@ import { ManegeComponent } from './components/manege/manege.component';
 import { ContentComponent } from './components/content/content.component';
 import { VdoComponent } from './components/vdo/vdo.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { CourseComponent } from './components/course/course.component';
+import { MemberComponent } from './components/member/member.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,14 @@ const routes: Routes = [
       {
         path: 'vdo',
         component: VdoComponent
+      },
+      {
+        path: 'course',
+        component: CourseComponent
+      },
+      {
+        path: 'member',
+        component: MemberComponent
       }
     ]
   }

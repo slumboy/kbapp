@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
+  // สร้าง Model สำหรับ Form
+  modelFrm = {
+    topic: '',
+    price: '',
+    detail: 'xx.png'
+  }
+
   constructor() { }
 
   ngOnInit() {

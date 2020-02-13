@@ -1,1 +1,62 @@
-<p>course works!</p>
+<!-- <ul class="">
+    <li>ชื่อบทเรียน</li>
+    <li>ราคา</li>
+    <li>เนื้อหาโดยย่อ</li>
+</ul> -->
+
+<div class="col b" id="wrapper">
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <h1 class="mt-4">
+        <label for="toppic_content">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          แก้ไข คอร์สเรียน</label>
+        <hr>
+      </h1>
+
+      <!-- Form -->
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="row mt-3">
+          <div class=" col">
+            <label for="topic">หัวข้อ</label>
+            <input type="text" name="txtTopic" [(ngModel)]="modelFrm.topic" autocomplete="off" id="txtTopic"
+              class="form-control" placeholder="แก้ไขหัวข้อ" aria-describedby="helpId">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class=" col-6">
+              <label for="price">ราคา</label>
+              <input type="text" name="txtprice" [(ngModel)]="modelFrm.price" autocomplete="off" id="txtprice"
+                class="form-control " placeholder="ราคา" aria-describedby="helpId">
+            </div>
+          </div>
+
+        <!-- Row 3 -->
+        <div class="row mt-3">
+          <div class="col">
+            <label for="price">รายละเอียด</label>
+            <ckeditor #editor [(ngModel)]="modelFrm.detail" id="detail" name="detail" type="Classic"></ckeditor>
+            <!-- divarea,Classic,Inline  for Ck Editor -->
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="row">
+          <div class="col btnEdit">
+            <button type="submit" class="btn btn-primary pull-right" btn-lg btn-block>
+              <i class="fa fa-pencil-square" aria-hidden="true"></i>
+              แก้ไข
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Close Form -->
+
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->

@@ -10,14 +10,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VdoComponent } from './components/vdo/vdo.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CourseComponent } from './components/course/course.component'
+import { CourseComponent } from './components/course/course.component';
+import { MemberComponent } from './components/member/member.component'
 @NgModule({
   declarations: [
     ContentComponent,
     ManegeComponent,
     VdoComponent,
     NavComponent,
-    CourseComponent
+    CourseComponent,
+    MemberComponent
   ],
   imports: [
     FormsModule,
