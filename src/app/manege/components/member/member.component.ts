@@ -19,15 +19,6 @@ export class MemberComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    var admin = require("firebase-admin");
-
-    var serviceAccount = require("path/to/serviceAccountKey.json");
-
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-      storageBucket: "<BUCKET_NAME>.appspot.com"
-    });
-
-    var bucket = admin.storage().bucket();
+    
   }
 }
