@@ -12,6 +12,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CourseComponent } from './components/course/course.component';
 import { MemberComponent } from './components/member/member.component'
+import * as admin from 'firebase-admin';
 @NgModule({
   declarations: [
     ContentComponent,

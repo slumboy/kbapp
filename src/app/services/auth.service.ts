@@ -83,7 +83,7 @@ export class AuthService {
       .then((credential) => {
         this.authState = credential.user
         this.ngZone.run(() => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/']);
         })
         // console.log(credential.user);
         // this.authState = credential.user
