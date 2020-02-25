@@ -16,7 +16,7 @@ export class MemberComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    var serviceAccount = require("C:/Users/User/Downloads/serviceAccountKey.json");
-   console.log(serviceAccount.project_id);
+  //   var serviceAccount = require("C:/Users/User/Downloads/serviceAccountKey.json");
+  //  console.log(serviceAccount.project_id);
   }
 }

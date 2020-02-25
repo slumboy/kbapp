@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NgbModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+// import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -68,7 +68,7 @@ import { SpinnerComponentComponent } from './spinner-component/spinner-component
     FormsModule, ReactiveFormsModule,
     NgbModule,
     NgbAlertModule,
-    AngularFontAwesomeModule,
+    // AngularFontAwesomeModule,
     SocialLoginModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
