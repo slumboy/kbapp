@@ -1,3 +1,4 @@
+@import '../../assets/css/style.css';
 .iframe-container {
   overflow: hidden;
   padding-top: 35%;
@@ -21,8 +22,6 @@
 }
 .avator:hover{
   color: #404040 !important;
-  /* font-weight: 700 !important;
-  letter-spacing: 3px; */
   background: none;
   -webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.57);

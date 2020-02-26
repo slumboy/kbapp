@@ -1,3 +1,4 @@
+@import '../../assets/css/style.css';
 .bordernav {
   width: auto;
   height: 190%;
@@ -11,6 +12,7 @@
 .navbar {
   background-color: transparent;
   margin-bottom: 2%;
+  max-width:1440px;
 }
 
 .navbar-nav {
