@@ -3,85 +3,39 @@
     <div class="hero-inner">
       <!--Section: Content-->
       <section class="hero team-section text-center dark-grey-text">
-
         <!-- Body -->
         <div class="row">
           <div class="col-12">
             <section class="pull-left">
               <h4>
                 <i class="fa fa-hourglass-start" aria-hidden="true"></i>
-                ระดับเริ่มต้น
+                {{course_name}}
                 <hr>
               </h4>
             </section>
           </div>
-          <div class="col-12  card-columns mb-5">
-            <div class="card c-title" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
+          <div class="col-12 card-columns mb-5">
+            <div class="card c-title" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine"
+              *ngFor="let c of course | async">
               <div class="card-body">
-                <h4 class="card-title ">ชั้นอนุบาล</h4>
-                <p class="card-text"> ฿ 590 </p>
+                <h4 class="card-title">{{c?.lv_name}}</h4>
+                <p class="card-text"> ฿ {{c?.lv_price}} </p>
                 <small>
                   ต่อ 1 ชั่วโมง ขั้นต่ำครั้งละ 2 ชม
                 </small>
               </div>
               <p class="small_sub">
-                การใช้สมองเป็นฐานการเรียนรู้
-                เพิ่มทักษะด้านเชาว์ปัญญา
-                พาน้องร้องเพลง เล่านิทานให้ฟัง
-                เขียน ก-ฮ หัดเขียนสระ
-                วรรณยุกต์ A-Z ท่องศัพท์คำง่ายๆ
-                ดูแลการบ้านทั่วไป
+                {{c?.lv_detail}}
               </p>
               <div class="pull-right mr-3 mb-1">
-                <a name="" id="" class="btn btn-outline-secondary" href="#" role="button">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-
-            <div class="card c-title-II" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <div class="card-body">
-                <h4 class="card-title ">ชั้นอนุบาล</h4>
-                <p class="card-text"> ฿ 590 </p>
-                <small>
-                  ต่อ 1 ชั่วโมง ขั้นต่ำครั้งละ 2 ชม
-                </small>
-              </div>
-              <p class="small_sub">
-                การใช้สมองเป็นฐานการเรียนรู้
-                เพิ่มทักษะด้านเชาว์ปัญญา
-                พาน้องร้องเพลง เล่านิทานให้ฟัง
-                เขียน ก-ฮ หัดเขียนสระ
-                วรรณยุกต์ A-Z ท่องศัพท์คำง่ายๆ
-                ดูแลการบ้านทั่วไป
-              </p>
-              <div class="pull-right mr-3 mb-1">
-                <a name="" id="" class="btn btn-outline-secondary" href="#" role="button">อ่านเพิ่มเติม</a>
-              </div>
-            </div>
-
-            <div class="card c-title-III" data-aos="fade-left" data-aos-offset="400" data-aos-easing="ease-in-sine">
-              <div class="card-body">
-                <h4 class="card-title ">ชั้นอนุบาล</h4>
-                <p class="card-text"> ฿ 590 </p>
-                <small>
-                  ต่อ 1 ชั่วโมง ขั้นต่ำครั้งละ 2 ชม
-                </small>
-              </div>
-              <p class="small_sub">
-                การใช้สมองเป็นฐานการเรียนรู้
-                เพิ่มทักษะด้านเชาว์ปัญญา
-                พาน้องร้องเพลง เล่านิทานให้ฟัง
-                เขียน ก-ฮ หัดเขียนสระ
-                วรรณยุกต์ A-Z ท่องศัพท์คำง่ายๆ
-                ดูแลการบ้านทั่วไป
-              </p>
-              <div class="pull-right mr-3 mb-1">
-                <a name="" id="" class="btn btn-outline-secondary" href="#" role="button">อ่านเพิ่มเติม</a>
+                <a name="" id="" class="btn btn-outline-secondary" [routerLink]="['/course' , c.lv_id]"
+                  routerLinkActive="router-link-active" role="button">อ่านเพิ่มเติม</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-12">
             <section class="pull-left">
               <h4>
@@ -147,11 +101,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Close Body -->
 
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-12">
             <section class="pull-left">
               <h4>
@@ -217,7 +171,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
       <!--Section: Content-->
     </div>

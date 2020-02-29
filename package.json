@@ -34,7 +34,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-icons": "^1.0.0-alpha2",
     "ckeditor4-angular": "^1.0.1",
-    "firebase": "^7.9.1",
+    "firebase": "^7.9.3",
     "firebase-admin": "^8.9.2",
     "firebase-functions": "^3.3.0",
     "font-awesome": "^4.7.0",

@@ -18,12 +18,12 @@
                   <div class="col">
                     <section class="pull-left">
                       <h4>
-                        ภาษาจีน ป.1
+                        {{itemValue?.lv_name}}
                       </h4>
+                      <hr>
                     </section>
                   </div>
                 </div>
-
                 <!-- Course Detail -->
                 <div class="row">
                   <div class="col">
@@ -36,14 +36,10 @@
                 </div>
                 <div class="row">
                   <div class="col">
-                    <section class="pull-left">
-                      <ul>
-                        <li>A</li>
-                        <li>B</li>
-                        <li>C</li>
-                        <li>D</li>
-                        <li>E</li>
-                      </ul>
+                    <section class="text-left">
+                      <p>
+                        {{itemValue?.lv_detail}}
+                      </p>
                     </section>
                   </div>
                 </div>
@@ -59,86 +55,80 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col">
-                    <section class="pull-left">
-                      <ul>
-                        <li>A</li>
-                        <li>B</li>
-                        <li>C</li>
-                        <li>D</li>
-                        <li>E</li>
-                      </ul>
-                    </section>
-                  </div>
+                  <div class="col text-left">
+                    <ul *ngFor="let item of unitDetail;let i=index">
+                      <li>บทที่ {{item.u_id}} {{item.u_name}}</li>
+                    </ul>
                 </div>
+              </div>
 
-                <!-- How to buy Course  -->
-                <div class="row">
-                  <div class="col">
-                    <section>
-                      <h4 class="pull-left">
-                        วิธีการสั่งซื้อ
-                      </h4>
-                    </section>
-                  </div>
+              <!-- How to buy Course  -->
+              <div class="row">
+                <div class="col">
+                  <section>
+                    <h4 class="pull-left">
+                      วิธีการสั่งซื้อ
+                    </h4>
+                  </section>
                 </div>
-                <div class="row">
-                  <div class="col">
-                    <section class="pull-left">
-                      <label>
-                        ติดต่อเพจ <a href="#" class="badge badge-primary"> Facebook </a>
-                      </label>
-                    </section>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <section class="pull-left">
+                    <label>
+                      ติดต่อเพจ <a href="#" class="badge badge-primary"> Facebook </a>
+                    </label>
+                  </section>
                 </div>
+              </div>
 
 
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="col">
+            <div class="card text-center mt-0">
+              <img class="card-img-top" src="holder.js/100px180/" alt="">
+              <div class="card-body">
+                <h4 class="card-title">฿ {{itemValue?.lv_price}}</h4>
+                <a class="btn btn-block btn-outline-info" href="#" role="button">
+                  รับคูปองส่วนลด
+                </a>
               </div>
             </div>
 
-            <!-- Right Content -->
-            <div class="col">
-              <div class="card text-center mt-0">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">฿ 1,450.00</h4>
-                  <a class="btn btn-block btn-outline-info" href="#" role="button">
-                    รับคูปองส่วนลด
-                  </a>
-                </div>
+            <div class="card text-left mt-3">
+              <img class="card-img-top" src="holder.js/100px180/" alt="">
+              <div class="card-body">
+                <h4 class="card-title">คอร์สนี้เหมาะกับ</h4>
+                <ul class="text-left">
+                  <li>ผู้เริ่มต้น</li>
+                  <li>120 Videos</li>
+                  <li>20 Unit</li>
+                  <li>14 Document</li>
+                </ul>
               </div>
+            </div>
 
-              <div class="card text-left mt-3">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">คอร์สนี้เหมาะกับ</h4>
-                  <ul class="text-left">
-                    <li>ผู้เริ่มต้น</li>
-                    <li>120 Videos</li>
-                    <li>20 Unit</li>
-                    <li>14 Document</li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Course Recomment -->
-              <div class="card text-left mt-3">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">แฟนเพจ</h4>
-                  <ul class="text-left">
-                    <li>ผู้เริ่มต้น</li>
-                    <li>120 Videos</li>
-                    <li>20 Unit</li>
-                    <li>14 Document</li>
-                  </ul>
-                </div>
+            <!-- Course Recomment -->
+            <div class="card text-left mt-3">
+              <img class="card-img-top" src="holder.js/100px180/" alt="">
+              <div class="card-body">
+                <h4 class="card-title">แฟนเพจ</h4>
+                <ul class="text-left">
+                  <li>ผู้เริ่มต้น</li>
+                  <li>120 Videos</li>
+                  <li>20 Unit</li>
+                  <li>14 Document</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!--Section: Content-->
     </div>
+    </section>
+    <!--Section: Content-->
+  </div>
   </div>
 </main>

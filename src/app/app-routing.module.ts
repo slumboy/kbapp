@@ -28,7 +28,7 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
-    path: 'course', component: CourseComponent
+    path: 'course/:id', component: CourseComponent
   },
   {
     path: 'course-all', component: CourseAllComponent
@@ -38,11 +38,11 @@ const routes: Routes = [
     loadChildren: './manege/manege.module#ManegeModule',
     data: { preload: false }
   },
-  {path: '**', component: HomeComponent}
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
-  imports: [ManegeModule, RouterModule.forRoot(routes,{ enableTracing: false })],
+  imports: [ManegeModule, RouterModule.forRoot(routes, { enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

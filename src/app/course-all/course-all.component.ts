@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as AOS from 'aos';
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Course } from '../models/CourseInterface';
+
 
 @Component({
   selector: 'app-course-all',
@@ -9,10 +13,21 @@ import * as AOS from 'aos';
 })
 export class CourseAllComponent implements OnInit {
 
-  constructor() { }
+  course: Observable<any>;
+  course_name:string;
+  constructor(private db: AngularFirestore) { }
 
   ngOnInit() {
     AOS.init();
+    this.course = this.getAll();
+
+    this.course.subscribe(res=>{
+      this.course_name = res[0]['course_name']
+    })
+  }
+
+  getAll () {
+    return this.db.collection('/course_a_jung_wen').valueChanges();
   }
 
 }
