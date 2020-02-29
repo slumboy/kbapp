@@ -14,25 +14,20 @@
               </h4>
             </section>
           </div>
-          <div class="col-12 card-columns mb-5">
-            <div class="card c-title" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine"
+          <!-- <div class="col-12 card-columns mb-5"> -->
+            <div class="card col-4 c-title mb-5" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine"
               *ngFor="let c of course | async">
               <div class="card-body">
                 <h4 class="card-title">{{c?.lv_name}}</h4>
                 <p class="card-text"> ฿ {{c?.lv_price}} </p>
-                <small>
-                  ต่อ 1 ชั่วโมง ขั้นต่ำครั้งละ 2 ชม
-                </small>
+                <p class="small_sub">{{c?.lv_detail}}</p>
               </div>
-              <p class="small_sub">
-                {{c?.lv_detail}}
-              </p>
               <div class="pull-right mr-3 mb-1">
-                <a name="" id="" class="btn btn-outline-secondary" [routerLink]="['/course' , c.lv_id]"
+                <a class="btn btn-outline-secondary" [routerLink]="['/course' , c.lv_id]"
                   routerLinkActive="router-link-active" role="button">อ่านเพิ่มเติม</a>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
 
         <!-- <div class="row">
