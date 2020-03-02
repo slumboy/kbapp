@@ -1,3 +1,10 @@
 .card_cus{
     box-shadow: 10px 10px aquamarine;
 }
+h1, h2, h3, h4, h5, h6, a, small, input, label, ul, li section, p {
+    font-family: 'Kanit';
+    font-weight: 300;
+}
+.c_text{
+    text-overflow: ellipsis;
+}

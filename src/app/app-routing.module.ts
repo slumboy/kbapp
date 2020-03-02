@@ -28,7 +28,7 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
-    path: 'course/:id', component: CourseComponent
+    path: 'course/:id/:flag', component: CourseComponent
   },
   {
     path: 'course-all', component: CourseAllComponent

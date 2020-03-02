@@ -18,7 +18,7 @@
                   <div class="col">
                     <section class="pull-left">
                       <h4>
-                        {{itemValue?.lv_name}}
+                        {{(itemValue?.lv_name)?itemValue?.lv_name:itemValue?.c_name}}
                       </h4>
                       <hr>
                     </section>
@@ -38,7 +38,7 @@
                   <div class="col">
                     <section class="text-left">
                       <p>
-                        {{itemValue?.lv_detail}}
+                        {{(itemValue?.lv_detail)?itemValue?.lv_detail:itemValue?.c_detail}}
                       </p>
                     </section>
                   </div>

@@ -1,12 +1,23 @@
-<h3 class="font-weight-bold text-center dark-grey-text pb-2" data-aos="fade-in" data-aos-easing="ease-out-cubic">คอร์สเรียนแนะนำ</h3>
+<h3 class="font-weight-bold text-center dark-grey-text pb-2" data-aos="fade-in" data-aos-easing="ease-out-cubic">
+  คอร์สเรียนแนะนำ</h3>
 <hr class="w-header my-4">
-<p class="lead text-center text-muted pt-2 mb-5" data-aos="fade-in" data-aos-easing="ease-out-cubic">Join thousands of satisfied customers using our template
+<p class="lead text-center text-muted pt-2 mb-5" data-aos="fade-in" data-aos-easing="ease-out-cubic">Join thousands of
+  satisfied customers using our template
   globally.</p>
 
 <div class="container">
   <!-- Row 1 -->
   <div class="row">
-    <div class="col-sm-6" data-aos="fade-in" data-aos-easing="ease-out-cubic">
+    <div class="col-md-6 col-sm-6" *ngFor="let c of cArr" data-aos="fade-in" data-aos-easing="ease-out-cubic">
+      <div class="card c_text">
+        <div class="card-body">
+          <h5 class="card-title">{{ c?.c_name}}</h5>
+          <p class="card-text">{{c?.c_detail}}</p>
+          <a href="#" class="btn btn-primary">อ่านรายละเอียดเพ่มเติม</a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-sm-6" data-aos="fade-in" data-aos-easing="ease-out-cubic">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
@@ -14,20 +25,11 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-    </div>
-    <div class="col-sm-6" data-aos="fade-in" data-aos-easing="ease-out-cubic">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- Row 2 -->
-  <div class="row mt-4">
+  <!-- <div class="row mt-4">
     <div class="col-sm-6" data-aos="fade-in" data-aos-easing="ease-out-cubic">
       <div class="card">
         <div class="card-body">
@@ -46,10 +48,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Row 3 -->
-  <div class="row mt-4">
+  <!-- <div class="row mt-4">
     <div class="col-sm-6" data-aos="fade-in" data-aos-easing="ease-out-cubic">
       <div class="card">
         <div class="card-body">
@@ -68,6 +70,6 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
