@@ -39,7 +39,7 @@
     "firebase-functions": "^3.3.0",
     "font-awesome": "^4.7.0",
     "googleapis": "^47.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mdbootstrap": "^4.13.0",
     "ng-circle-progress": "^1.5.1",
     "rxjs": "~6.5.4",
